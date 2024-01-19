@@ -24,13 +24,7 @@
         });
     }
     
-    let usuario="";
-    const auth = getAuth();
-    onAuthStateChanged(auth, (user) => {
-        if (user) {
-        usuario=user;
-        }
-    });
+    let usuario=getAuth().currentUser;
 
     
     const filtroNombre = ref('');
